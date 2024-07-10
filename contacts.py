@@ -15,7 +15,7 @@ def main():
     parser.add_argument("-d", "-D", help="Delete contact", nargs="+")
     args = parser.parse_args()    
     
-    file_name = "contacts.csv"
+    file_name = ".contacts.csv"
     if not os.path.isfile(file_name):
         with open(file_name, "w") as file:
             writer = csv.DictWriter(file, fieldnames=["Name", "Phone", "Mobile", "Email", "Work", "Company", "Birthday", "Notes", "Address", "Work_Address"])
